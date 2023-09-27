@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/boot
+strap.min.css"
+      integrity="sha384-
+rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65
+"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fontawesome/6.4.2/css/all.min.css"
+      integrity="sha512-
+z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKx
+Lhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Elimination</title>
+  </head>
+  <body>
+    <div class="bg light">
+      <div class="container p-5">
+        <div class="row">
+          <div class="col-lg-3 bg-dark text-white py-4 rounded">
+            <ul class="nav flex-column mx-4">
+              <li class="nav-item">
+                <a href=""><i class="fa-solid fa-house mx-2"></i>Home</a>
+              </li>
+              <li class="nav-item">
+                <a href=""><i class="fa-solid fa-user mx-2"></i>Profile</a>
+              </li>
+              <li class="nav-item">
+                <a href=""
+                  ><i class="fa-solid fa-address-book mx-2"></i>Contact</a
+                >
+              </li>
+            </ul>
+            <hr />
+            <form class="d-flex">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search "
+                aria-label="Search"
+              />
+
+              <button class="btn btn-outline-light" type="submit">
+                Search
+              </button>
+            </form>
+            <hr />
+            <ul class="list-unstyled mx-4">
+              <li>
+                <a href=""
+                  ><i class="fa-solid fa-book mx-2"></i>List of Subjects</a
+                >
+              </li>
+              <li>
+                <a href=""><i class="fa-solid fa-calendar mx-2"></i>calendar</a>
+              </li>
+              <li>
+                <a class="" href=""
+                  ><i class="fa-solid fa-clock-rotate-left mx-2"></i>History</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-8 bg-light text-dark py-5 px-5">
+            <div class="d-flex justify-content-between">
+              <h4 class="text-uppercase">Week 1</h4>
+              <h5>Date</h5>
+            </div>
+            <hr />
+            <div class="allSubjects">
+              <!--Math-->
+              <div class="subject d-flex m-3">
+                
+                <div class="card subject-card">
+                  <div class="card-body">
+                    <h5 class="card-title">Math Applique</h5>
+                    <p class="card-text">3 classes a week</p>
+
+                    <button
+                      type="button"
+                      class="btn btn-primary"
+                      data-bs-toggle="modal"
+                      data-bs-target="#mathModal"
+                    >
+                      Check your absence
+                    </button>
+                  </div>
+                </div>
+                <div class="d-flex align-item-center">
+                    <input
+                          type="checkbox"
+                          class="btn-check"
+                          id="algobtncheck1"
+                          onclick="isChecked(this)"
+                          autocomplete="off"
+                          
+                        />
+                        <label class="btn btn-outline-primary" for="algobtncheck1"
+                          >Seance 1</label
+                        >
+
+                        <input
+                          type="checkbox"
+                          class="btn-check"
+                          id="algobtncheck2"
+                          autocomplete="off"
+                        />
+                        <label class="btn btn-outline-primary" for="algobtncheck2"
+                          >Seance 2</label
+                        >
+
+                        <input
+                          type="checkbox"
+                          class="btn-check"
+                          id="algobtncheck3"
+                          autocomplete="off"
+                        />
+                        <label class="btn btn-outline-primary" for="algobtncheck3"
+                          >Seance 3</label
+                        >
+                        <input
+                          type="checkbox"
+                          class="btn-check"
+                          id="algobtncheck4"
+                          autocomplete="off"
+                        />
+                        <label class="btn btn-outline-primary" for="algobtncheck4"
+                          >Seance 4</label
+                        >
+                </div>
+              </div>
+              <!--modal for math-->
+              <div
+                class="modal fade"
+                id="mathModal"
+                tabindex="-1"
+                aria-labelledby="mathModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="mathModalLabel">
+                        Check your absence for this week
+                      </h5>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">
+                      <div
+                        class="btn-group"
+                        role="group"
+                        aria-label="Basic checkbox toggle button group"
+                      >
+                        <input
+                          type="checkbox"
+                          class="btn-check"
+                          id="btncheck1"
+                          autocomplete="off"
+                        />
+                        <label class="btn btn-outline-primary" for="btncheck1"
+                          >Seance 1</label
+                        >
+
+                        <input
+                          type="checkbox"
+                          class="btn-check"
+                          id="btncheck2"
+                          autocomplete="off"
+                        />
+                        <label class="btn btn-outline-primary" for="btncheck2"
+                          >Seance 2</label
+                        >
+
+                        <input
+                          type="checkbox"
+                          class="btn-check"
+                          id="btncheck3"
+                          autocomplete="off"
+                        />
+                        <label class="btn btn-outline-primary" for="btncheck3"
+                          >Seance 3</label
+                        >
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal"
+                      >
+                        Close
+                      </button>
+                      <button type="button" class="btn btn-primary">
+                        Save changes
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--Algo-->
+              <div class="subject d-flex m-3">
+                <div class="card subject-card">
+                  <div class="card-body">
+                    <h5 class="card-title">Algo</h5>
+                    <p class="card-text">4 classes a week</p>
+
+                    <button
+                      type="button"
+                      class="btn btn-primary"
+                      data-bs-toggle="modal"
+                      data-bs-target="#algoModal"
+                    >
+                      Check your absence
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="modal fade"
+                id="algoModal"
+                tabindex="-1"
+                aria-labelledby="algoModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="algoModalLabel">
+                        Check your absence for this week
+                      </h5>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">
+                      <div
+                        class="btn-group"
+                        role="group"
+                        aria-label="Basic checkbox toggle button group"
+                      >
+                        <input
+                          type="checkbox"
+                          class="btn-check"
+                          id="algobtncheck1"
+                          onclick="isChecked(this)"
+                          autocomplete="off"
+                        />
+                        <label class="btn btn-outline-primary" for="algobtncheck1"
+                          >Seance 1</label
+                        >
+
+                        <input
+                          type="checkbox"
+                          class="btn-check"
+                          id="algobtncheck2"
+                          autocomplete="off"
+                        />
+                        <label class="btn btn-outline-primary" for="algobtncheck2"
+                          >Seance 2</label
+                        >
+
+                        <input
+                          type="checkbox"
+                          class="btn-check"
+                          id="algobtncheck3"
+                          autocomplete="off"
+                        />
+                        <label class="btn btn-outline-primary" for="algobtncheck3"
+                          >Seance 3</label
+                        >
+                        <input
+                          type="checkbox"
+                          class="btn-check"
+                          id="algobtncheck4"
+                          autocomplete="off"
+                        />
+                        <label class="btn btn-outline-primary" for="algobtncheck4"
+                          >Seance 4</label
+                        >
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal"
+                      >
+                        Close
+                      </button>
+                      <button type="button" class="btn btn-primary">
+                        Save changes
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://kit.fontawesome.com/04142c24ea.js"
+    crossorigin="anonymous"
+  ></script>
+  <script src="script.js"></script>
+</html>
